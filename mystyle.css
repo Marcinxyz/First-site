@@ -1,0 +1,242 @@
+h1{
+    font-size: 3em;
+    text-align: center;
+}
+
+h2{
+    text-align:center;
+}
+
+  main {
+    max-width: 800px;
+  }
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.puzzlebox{
+    display: grid;
+    grid-template-columns: 2;
+    grid-gap: 2px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.box2{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.box-icon{
+    display: flex;
+    align-content: center;
+    margin:15px 0px;
+    
+}
+
+.icon{
+    text-align: center;
+    margin: 0px 15px;
+}
+
+.puzzle1{
+    font-size: 0.75em;
+    text-align: center;
+    justify-content: center;
+    grid-column: 1 / 2;
+    grid-row: 1;     
+    background-color: lightgray;
+}
+
+.puzzle2{
+    font-size: 0.75em;
+    text-align: center;
+    justify-content: center;
+    grid-column: 2 / 2;
+    grid-row: 1;     
+    background-color: lightgray;
+}
+
+.puzzle3{
+    font-size: 0.75em;
+    text-align: center;
+    justify-content: center;
+    grid-column: 1 / 2;
+    grid-row: 2;     
+    background-color: lightgray;
+}
+
+.puzzle4{
+    font-size: 0.75em;
+    text-align: center;
+    justify-content: center;
+    grid-column: 2 / 2;
+    grid-row: 2;     
+    background-color: lightgray;
+}
+
+footer{
+    max-width: 1024px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;   
+    
+}
+
+.box1{
+    align-content: center;
+    height: 300px;
+    background-color: lightgray;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.list{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+svg{
+    margin: 2px 35% 0px 35%;
+}
+
+
+
+header{
+    max-width: 1024px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links{
+    font-size: 0.75em;
+    font-weight: normal;    
+}
+a:link {
+    color: black;
+}
+  
+a:visited {
+    color: black;
+}
+
+.top{
+    font-weight: bold;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;   
+}
+
+input{
+    background-color: lightgray;
+    border:none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.overline{
+    font-size: 0.6em;
+    color: lightslategrey;
+}
+
+p{
+    font-size: 1em;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0px;
+    
+    
+}
+
+.nawi{
+    display: flex;
+    align-items: center;
+    padding:0;
+    
+}
+
+li{
+    padding:0px 5px;
+}
+.stopa{
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+a.overline:link {
+    color: lightslategrey;
+}
+  
+a.overline:visited {
+    color: lightslategrey;
+}
+
+.wsk{
+    font-weight: bold;
+}
+
+a.wsk:link {
+    color: blue;
+}
+  
+a.wsk:visited {
+    color: blue;
+    
+}
+
+.cardbox{
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    
+}
+
+.obraz{
+    height: 100px;
+    width: 100px;
+    background: grey;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+@media (min-width: 640px) {
+    .cardbox {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0.5rem;
+    }
+}
