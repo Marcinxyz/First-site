@@ -5,29 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Adding Base Styles, useful defaults for basic HTML elements, plus resets  -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.17/dist/base.css">
     <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
+    <!-- Header element: 1. Center the header. 2. align flex items to center 3. Do not style the font at this level. rather style text at it's apropriate element-->
     <header>
+        <!-- class "links": 1. no need to override font bold. 2. remove font size declaration. 3. I would sugest to remove the class, or rename it to "navigation" -->
         <nav class="links">
+            <!-- class "nawi": 1.there is no need to set padding to "0" it is already 0 by default. 2. no need for align-items property here. All the "li" elements should be styles by the same class, where you can target the positioning. 3. I would sugest to rename the class to "main-menu" -->
             <ul class="nawi">
+                <!-- the "li" element: 1. try not to style this element directly as its a top level one. rather use a class, eg. "menu-item" to target its styling. so move the padding to a class. actually see below for padding -->
                 <li><a href="">First Link</a></li>
+                <!-- "a" element is handled by the base style added above at the head. so no need to set color and text-decoration properties. 2. Rather set a class to this element and move the padding that you set at "li" to the class of "a".  -->
                 <li><a href="">Second Link</a></li>
                 <li><a href="">Third Link</a></li>
             </ul>
         </nav>
+        <!-- set a class on "a" element and then style it. or use css selectors to target this particular element do not set padding directly to "a" as all other "a" element will inherit this property and you will need to overide it on each. read more here: https://www.w3schools.com/cssref/css_selectors.asp, and https://www.w3schools.com/cssref/trysel.asp and https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors-->
         <a href="">Source</a>
+        <!-- the same goes here for this element. You have styled all <button> on the page the same, which imposes you to use more css rules to overide. So follow the same idea mentioned above. Target specificly only this element either by giving it a class, or using few selectors -->
         <button>Button</button>
     </header>
     <main class="container">
+        <!-- "box" class: 1. do not use flex for this. The child block elements follow a natural way set to column. -->
         <section class="box">
+            <!-- "h1" set class to target. eg. "hero-title" -->
             <h1>Powerful features for working faster</h1>
+            <!-- "p" set class to target. eg. "hero-lead" -->
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, saepe ipsum quo asperiores exercitationem cumque! Aut ea facilis similique perferendis. Cupiditate, fugiat dolore! Nihil dicta, optio nisi inventore corrupti ad.</p>
+            <!-- wrap "form" inside a div. set to form: display: block; text-align: center; -->
+            <div>
             <form>
+                <!-- "input" set class to target. eg. "hero-form_field" -->
                 <input type="text" placeholder="Placeholder">
                 <input type="text" placeholder="Placeholder">
                 <button>Button</button>
             </form>
+        </div>
             <div class="box1"></div>
         </section>
         <section class="box">
