@@ -13,101 +13,101 @@
     <!-- Header element: 1. Center the header. 2. align flex items to center 3. Do not style the font at this level. rather style text at it's apropriate element-->
     <header>
         <!-- class "links": 1. no need to override font bold. 2. remove font size declaration. 3. I would sugest to remove the class, or rename it to "navigation" -->
-        <nav class="links">
+        <nav>
             <!-- class "nawi": 1.there is no need to set padding to "0" it is already 0 by default. 2. no need for align-items property here. All the "li" elements should be styles by the same class, where you can target the positioning. 3. I would sugest to rename the class to "main-menu" -->
-            <ul class="nawi">
+            <ul class="main-menu">
                 <!-- the "li" element: 1. try not to style this element directly as its a top level one. rather use a class, eg. "menu-item" to target its styling. so move the padding to a class. actually see below for padding -->
-                <li><a href="">First Link</a></li>
+                <li class="links"><a href="" class="menu-item">First Link</a></li>
                 <!-- "a" element is handled by the base style added above at the head. so no need to set color and text-decoration properties. 2. Rather set a class to this element and move the padding that you set at "li" to the class of "a".  -->
-                <li><a href="">Second Link</a></li>
-                <li><a href="">Third Link</a></li>
+                <li class="links"><a href="" class="menu-item">Second Link</a></li>
+                <li class="links"><a href="" class="menu-item">Third Link</a></li>
             </ul>
         </nav>
         <!-- set a class on "a" element and then style it. or use css selectors to target this particular element do not set padding directly to "a" as all other "a" element will inherit this property and you will need to overide it on each. read more here: https://www.w3schools.com/cssref/css_selectors.asp, and https://www.w3schools.com/cssref/trysel.asp and https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors-->
-        <a href="">Source</a>
+        <a href="" class="logo">Source</a>
         <!-- the same goes here for this element. You have styled all <button> on the page the same, which imposes you to use more css rules to overide. So follow the same idea mentioned above. Target specificly only this element either by giving it a class, or using few selectors -->
-        <button>Button</button>
+        <button class="przycisk">Button</button>
     </header>
     <main class="container">
         <!-- "box" class: 1. do not use flex for this. The child block elements follow a natural way set to column. -->
         <section class="box">
             <!-- "h1" set class to target. eg. "hero-title" -->
-            <h1>Powerful features for working faster</h1>
+            <h1 class="hero-title">Powerful features for working faster</h1>
             <!-- "p" set class to target. eg. "hero-lead" -->
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, saepe ipsum quo asperiores exercitationem cumque! Aut ea facilis similique perferendis. Cupiditate, fugiat dolore! Nihil dicta, optio nisi inventore corrupti ad.</p>
+            <p class="hero-lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, saepe ipsum quo asperiores exercitationem cumque! Aut ea facilis similique perferendis. Cupiditate, fugiat dolore! Nihil dicta, optio nisi inventore corrupti ad.</p>
             <!-- wrap "form" inside a div. set to form: display: block; text-align: center; -->
             <div>
-            <form>
-                <!-- "input" set class to target. eg. "hero-form_field" -->
-                <input type="text" placeholder="Placeholder">
-                <input type="text" placeholder="Placeholder">
-                <button>Button</button>
-            </form>
-        </div>
+                <form>
+                    <!-- "input" set class to target. eg. "hero-form_field" -->
+                    <input type="text" class="hero-form_field" placeholder="Placeholder">
+                    <input type="text" class="hero-form_field" placeholder="Placeholder">
+                    <button class="przycisk">Button</button>
+                </form>
+            </div>
             <div class="box1"></div>
         </section>
         <section class="box">
                 <p class="overline">OVERLINE</p>
-                <h2>We've always been obsessed with making work better for people</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore asperiores quasi maiores delectus aliquid ex natus aperiam, odio hic quam voluptatum quod repellat quas eveniet perspiciatis at nemo consectetur?</p>        
+                <h2 class="smaller-hero-title">We've always been obsessed with making work better for people</h2>
+                <p class="hero-lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore asperiores quasi maiores delectus aliquid ex natus aperiam, odio hic quam voluptatum quod repellat quas eveniet perspiciatis at nemo consectetur?</p>        
             <div class="puzzlebox">
-                <div class="puzzle1">
+                <div class="puzzle">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                       </svg>
-                    <h3>Interactive Content</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam reprehenderit cum rem. </p>
+                    <h3 class="smallest-hero-title">Interactive Content</h3>
+                    <p class="hero-lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam reprehenderit cum rem. </p>
                 </div>
-                <div class="puzzle2">
+                <div class="puzzle">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                    <h3>Dynamic website</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam reprehenderit cum rem. </p>
+                    <h3 class="smallest-hero-title">Dynamic website</h3>
+                    <p class="hero-lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam reprehenderit cum rem. </p>
                 </div>
-                <div class="puzzle3">
+                <div class="puzzle">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                       </svg>
-                    <h3>See how work gets done</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam reprehenderit cum rem. </p>
+                    <h3 class="smallest-hero-title">See how work gets done</h3>
+                    <p class="hero-lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam reprehenderit cum rem. </p>
                 </div>
-                <div class="puzzle4">
+                <div class="puzzle">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                       </svg>
-                    <h3>Source for Buisness</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam reprehenderit cum rem. </p>
+                    <h3 class="smallest-hero-title">Source for Buisness</h3>
+                    <p class="hero-lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nam reprehenderit cum rem. </p>
                 </div>
             </div>
         </section>
         <section class="box">
-            <h2>Popular products</h2>
+            <h2 class="smaller-hero-title">Popular products</h2>
             <div class="cardbox">
                 <div class="card">
                     <div class="obraz"></div>
-                    <p>$1.500 <span class="overline">$1.999</span></p>
-                    <p>Small description of that amaizing product</p>                                
+                    <p class="hero-lead">$1.500 <span class="overline">$1.999</span></p>
+                    <p class="hero-lead">Small description of that amaizing product</p>                                
                 </div>
                 <div class="card">
                     <div class="obraz"></div>
-                    <p>$1.500 <span class="overline">$1.999</span></p>
-                    <p>Small description of that amaizing product</p>
+                    <p class="hero-lead">$1.500 <span class="overline">$1.999</span></p>
+                    <p class="hero-lead">Small description of that amaizing product</p>
                 </div>
                 <div class="card">
                     <div class="obraz"></div>
-                    <p>$1.500 <span class="overline">$1.999</span></p>
-                    <p>Small description of that amaizing product</p>
+                    <p class="hero-lead">$1.500 <span class="overline">$1.999</span></p>
+                    <p class="hero-lead">Small description of that amaizing product</p>
                 </div>
                 <div class="card">
                     <div class="obraz"></div>
-                    <p>$1.500 <span class="overline">$1.999</span></p>
-                    <p>Small description of that amaizing product</p>
+                    <p class="hero-lead">$1.500 <span class="overline">$1.999</span></p>
+                    <p class="hero-lead">Small description of that amaizing product</p>
                 </div>
                 <div class="card">
                     <div class="obraz"></div>
-                    <p>$1.500 <span class="overline">$1.999</span></p>
-                    <p>Small description of that amaizing product</p>
+                    <p class="hero-lead">$1.500 <span class="overline">$1.999</span></p>
+                    <p class="hero-lead">Small description of that amaizing product</p>
                 </div>
             </div>
         </section>
@@ -116,41 +116,41 @@
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                   </svg>
-                <h4>Dynamic Website</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h3 class="smallest-hero-title">Dynamic Website</h3>
+                <p class="hero-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <a href="" class="wsk">First Link</a>
             </div>
             <div class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                   </svg>
-                <h4>Static Website</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h3 class="smallest-hero-title">Static Website</h3>
+                <p class="hero-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <a href="" class="wsk">Second Link</a>
             </div>
             <div class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
                   </svg>
-                <h4>Interactive Content</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h3 class="smallest-hero-title">Interactive Content</h3>
+                <p class="hero-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <a href="" class="wsk">Third Link</a>
             </div>
             <div class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                   </svg>
-                <h4>Interaction Design</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <h3 class="smallest-hero-title">Interaction Design</h3>
+                <p class="hero-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 <a href="" class="wsk">Fourth Link</a>
             </div>
         </section>
         <section class="box">
-            <h2>Get a free mobile app</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, repellendus ea. Earum non consequuntur repudiandae ipsum labore, nihil enim impedit aliquid excepturi illum. Nobis eum, facilis quos labore minus vel?</p>
+            <h2 class="smaller-hero-title">Get a free mobile app</h2>
+            <p class="hero-lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, repellendus ea. Earum non consequuntur repudiandae ipsum labore, nihil enim impedit aliquid excepturi illum. Nobis eum, facilis quos labore minus vel?</p>
             <form>
-                <input type="text" placeholder="Placeholder">
-                <Button>Button</Button>
+                <input type="text" class="hero-form_field" placeholder="Placeholder">
+                <Button class="przycisk">Button</Button>
             </form>
         </section>
     </main>
@@ -159,50 +159,50 @@
             <div>
                 <ul>
                     <li class="top">First Coulmn</li>
-                    <li><a href="">First Link</a></li>
-                    <li><a href="">Second Link</a></li>
-                    <li><a href="">Third Link</a></li>
-                    <li><a href="">Fourth Link</a></li>
+                    <li class="links"><a href="">First Link</a></li>
+                    <li class="links"><a href="">Second Link</a></li>
+                    <li class="links"><a href="">Third Link</a></li>
+                    <li class="links"><a href="">Fourth Link</a></li>
                 </ul>
             </div>
             <div>
                 <ul>
                     <li class="top">Second Coulmn</li>
-                    <li><a href="">First Link</a></li>
-                    <li><a href="">Second Link</a></li>
-                    <li><a href="">Third Link</a></li>
-                    <li><a href="">Fourth Link</a></li>
-                    <li><a href="">Fifth Link</a></li>
-                    <li><a href="">Sixth Link</a></li>
+                    <li class="links"><a href="">First Link</a></li>
+                    <li class="links"><a href="">Second Link</a></li>
+                    <li class="links"><a href="">Third Link</a></li>
+                    <li class="links"><a href="">Fourth Link</a></li>
+                    <li class="links"><a href="">Fifth Link</a></li>
+                    <li class="links"><a href="">Sixth Link</a></li>
                 </ul>
             </div>
             <div>
                 <ul>
                     <li class="top">Thrid Coulmn</li>
-                    <li><a href="">First Link</a></li>
-                    <li><a href="">Second Link</a></li>
-                    <li><a href="">Third Link</a></li>
-                    <li><a href="">Fourth Link</a></li>
+                    <li class="links"><a href="">First Link</a></li>
+                    <li class="links"><a href="">Second Link</a></li>
+                    <li class="links"><a href="">Third Link</a></li>
+                    <li class="links"><a href="">Fourth Link</a></li>
                 </ul>
             </div>
             <div>
                 <ul>
                     <li class="top">Fourth Coulmn</li>
-                    <li><a href="">First Link</a></li>
-                    <li><a href="">Second Link</a></li>
-                    <li><a href="">Third Link</a></li>
-                    <li><a href="">Fourth Link</a></li>
-                    <li><a href="">Fifth Link</a></li>
+                    <li class="links"><a href="">First Link</a></li>
+                    <li class="links"><a href="">Second Link</a></li>
+                    <li class="links"><a href="">Third Link</a></li>
+                    <li class="links"><a href="">Fourth Link</a></li>
+                    <li class="links"><a href="">Fifth Link</a></li>
                 </ul>
             </div>       
         </div>
     
         <div class="stopa">
             <nav>
-                <ul class="nawi">
-                    <li><a href="" class="overline">Privacy Policy</a></li>
-                    <li><a href="" class="overline">Term of Service</a></li>
-                    <li> <a href="" class="overline">Language</a></li>
+                <ul class="main-menu">
+                    <li class="links"><a href="" class="overline">Privacy Policy</a></li>
+                    <li class="links"><a href="" class="overline">Term of Service</a></li>
+                    <li class="links"> <a href="" class="overline">Language</a></li>
                 </ul>
             </nav>
                 <p class="overline">Copyrights</p>
